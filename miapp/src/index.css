@@ -11,3 +11,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {  display: grid;
+  height: 350px;
+  width: 250px;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header header"
+    "display display display display display"
+    "entre uno dos tres borrar1"
+    "por cuatro cinco seis borrarTodo"
+    "menos siete ocho nueve enter"
+    "mas calendar cero punto enter"
+    ". . . . .";
+}
+
+.header { grid-area: header; }
+
+.display { grid-area: display; }
+
+.entre { grid-area: entre; }
+
+.uno { grid-area: uno; }
+
+.dos { grid-area: dos; }
+
+.tres { grid-area: tres; }
+
+.borrar1 { grid-area: borrar1; }
+
+.por { grid-area: por; }
+
+.menos { grid-area: menos; }
+
+.mas { grid-area: mas; }
+
+.cuatro { grid-area: cuatro; }
+
+.cinco { grid-area: cinco; }
+
+.seis { grid-area: seis; }
+
+.siete { grid-area: siete; }
+
+.ocho { grid-area: ocho; }
+
+.nueve { grid-area: nueve; }
+
+.borrarTodo { grid-area: borrarTodo; }
+
+.calendar { grid-area: calendar; }
+
+.cero { grid-area: cero; }
+
+.punto { grid-area: punto; }
+
+.enter { grid-area: enter; }
+
+
+html, body , .container {
+  height: 100%;
+  margin: 0;
+}
+
+/* For presentation only, no need to copy the code below */
+
+.container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
