@@ -1,9 +1,17 @@
 import React from 'react';
+
+
+
 export default function Button(props) {
-    let {clase, input, children}=props
+    let {text, clase, icono, onClick}=props
     return(
-        <button className={clase}>{input}</button>
+        <button  className={clase} text={text} onClick={onClick} > 
+
+            {icono?<div style={{justifyContent: 'flex-start'}}>icono</div>:""}
+        </button>
 
     )
 
 }
+
+// onClick{}
